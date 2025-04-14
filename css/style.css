@@ -1,8 +1,9 @@
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);;
     color: #333;
     line-height: 1.6;
 }
@@ -14,9 +15,9 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: #007bff;
     padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.515);
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -34,7 +35,7 @@ header .container {
 .logo {
     font-size: 3em;
     font-weight: bold;
-    color: #007bff;
+    color: #ffffff;
 }
 
 .logo span {
@@ -55,18 +56,18 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #555;
+    color: #2a2a2a;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #007bff;
+    color: #ffffff;
 }
 
 .hero {
-    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
     padding: 100px 0;
+    padding-top: 300px;
 }
 
 .hero .container {
@@ -124,7 +125,6 @@ nav a:hover {
 
 .hero-image img {
     max-width: 400px;
-    animation: floatImage 3s ease-in-out infinite alternate;
 }
 
 @keyframes floatImage {
@@ -135,10 +135,12 @@ nav a:hover {
         transform: translateY(-15px);
     }
 }
+/* Section 1 */
 
 .features {
     padding: 80px 0;
-    background-color: #fff;
+    background-color: #007bffac;
+    border-radius: 50px;
 }
 
 .features h2 {
@@ -147,6 +149,62 @@ nav a:hover {
     text-align: center;
     margin-bottom: 40px;
 }
+
+/* Section 2 */
+
+.freature2 h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: left;
+    margin-bottom: 40px;
+    padding-top: 100px;
+}
+
+#um{
+    font-size: 1.3em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+#dois{
+    font-size: 1.3em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    padding-bottom: 70px;
+}
+
+.hero-image2{
+    flex: 1;
+    text-align:right;
+}
+
+.hero-image2 img{
+    max-width: 350px;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.freatures .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.freature2 a{
+    text-decoration: none;
+    color: #2a2a2a;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.freature2 a:hover{
+    color: #007bff;
+}
+
 
 .features-grid {
     display: grid;
@@ -184,6 +242,8 @@ nav a:hover {
     color: #fff;
     padding: 60px 0;
     text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .call-to-action h2 {
