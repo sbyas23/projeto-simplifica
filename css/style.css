@@ -25,6 +25,7 @@ header {
     width: 100%;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
+    z-index: 2;
 }
 
 header .container {
@@ -49,6 +50,7 @@ nav ul {
     margin: 0;
     display: flex;
     font-size: 25px;
+    z-index: 2;
 }
 
 nav li {
@@ -275,14 +277,55 @@ nav a:hover {
 
 /* Section 4 */
 
-.feature4 {
-    background-color: #e0f7fa;
+#forma{
+    width: 100vw;
+    height: 550px;
+    background: linear-gradient(
+      -65deg,         /* inclinação */
+      #f1f8e9 55%,    /* cinza claro na parte de baixo */
+      #007bff 50%     /* azul na parte de cima */
+    );
+
 }
 
-#line{
+#materia{
+    font-size: 4.5em;
+    color: #ffffff;
+    text-align: center;
+    padding-right: 935px;
+    padding-top: 180px;
+
+}
+
+.freature4 p{
+    text-align: center;
+    font-size: 1.5em;
+    color: #000000;
+    line-height: 1.8;
+    position: relative;
+    bottom: 180px;
+    right: 2px;
+    left: 330px;
+    z-index: 1;
+}
+
+.button3 {
+    display: inline-block;
     background-color: #007bff;
-    width: 50%;
-    height: 700px;
+    color: #fff;
+    padding: 3px 12px;
+    text-decoration: none;
+    border-radius: 39px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: relative;
+    bottom: 180px;
+    right: 2px;
+    left: 1100px;
+}
+
+.button3:hover {
+    background-color: #0056b3;
 }
 
 .features-grid {
