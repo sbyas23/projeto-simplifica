@@ -294,10 +294,11 @@ nav a:hover {
     text-align: center;
     padding-right: 935px;
     padding-top: 180px;
+    position: static;
 
 }
 
-.freature4 p{
+#textos{
     text-align: center;
     font-size: 1.5em;
     color: #000000;
@@ -309,7 +310,7 @@ nav a:hover {
     z-index: 1;
 }
 
-.button3 {
+.botao{
     display: inline-block;
     background-color: #007bff;
     color: #fff;
@@ -320,13 +321,49 @@ nav a:hover {
     transition: background-color 0.3s ease;
     position: relative;
     bottom: 180px;
-    right: 2px;
-    left: 1100px;
+    left: 1250px;
+
 }
 
-.button3:hover {
+.botao:hover{
     background-color: #0056b3;
 }
+
+/* #button3 {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 3px 12px;
+    text-decoration: none;
+    border-radius: 39px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: relative;
+    bottom: 180px;
+    left: 1300px;
+}
+
+#button3:hover {
+    background-color: #0056b3;
+}
+
+#button4 {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 3px 12px;
+    text-decoration: none;
+    border-radius: 39px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: relative;
+    bottom: 180px;
+    left: 1220px;
+}
+
+#button4:hover {
+    background-color: #0056b3;
+} */
 
 .features-grid {
     display: grid;
