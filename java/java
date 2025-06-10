@@ -1,1 +1,23 @@
 
+ const textos = [
+    "A Álgebra é uma área da matemática que usa letras e símbolos para representar números e resolver problemas.",
+    "Ela ajuda a entender relações, criar fórmulas e desenvolver o raciocínio lógico.",
+    "Na álgebra, usamos variáveis como 'x' e 'y' para generalizar operações.",
+    "Resolver equações é uma das principais aplicações da álgebra."
+  ];
+
+  let indiceAtual = 0;
+
+  function atualizarTexto() {
+    document.getElementById("textos").innerText = textos[indiceAtual];
+  }
+
+  function mostrarTextoAnterior() {
+    indiceAtual = (indiceAtual - 1 + textos.length) % textos.length;
+    atualizarTexto();
+  }
+
+  function mostrarTextoProximo() {
+    indiceAtual = (indiceAtual + 1) % textos.length;
+    atualizarTexto();
+  }
