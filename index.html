@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <div class="container">
             <div class="logo">
                 <span>SP</span>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Álgebra</a></li>
-                    <li><a href="#">Geometria</a></li>
-                    <li><a href="#">Matemática básica</a></li>
+                    <li><a href="#algebra" class="nav-link">Álgebra</a></li>
+                    <li><a href="#geometria" class="nav-link">Geometria</a></li>
+                    <li><a href="#matematica-basica" class="nav-link">Matemática básica</a></li>
                 </ul>
             </nav>
         </div>
@@ -95,22 +95,38 @@
         </div>
     </section>
 
-     <section>
-        <div id="forma">
-            <div class="freature4">
-                <h2 id="materia">ÁLGEBRA</h2>
-                <p id="textos"><b>A Álgebra é uma área da matemática que usa <br> 
-                    letras e símbolos para representar números e  <br>resolver problemas.
-                    Ela ajuda a entender relações, <br> criar fórmulas e desenvolver o raciocínio lógico.</b>
-                </p>
-            </div>
-            <div class="botoes">
-                <button class="botao" onclick="mostrarTextoAnterior()"><</button>
-                <button class="botao" onclick="mostrarTextoProximo()">></button>
-            </div>
-        </div>
+    <section id="algebra" class="subject-card align-right-content fade-in">
+    <div class="subject-image">
+        <img src="img/alge.png" alt="Símbolos e Equações de Álgebra">
+    </div>
+    <div class="subject-content">
+        <h2 class="subject-title">Álgebra</h2>
+        <p class="subject-description">A Álgebra é a linguagem fundamental da matemática, permitindo-nos resolver problemas complexos através da manipulação de símbolos e variáveis. Ela fornece as ferramentas para entender desde equações simples até conceitos avançados que sustentam a ciência e a tecnologia.</p>
+        <p class="subject-description">Aprenda a desvendar os mistérios das equações de 1º e 2º grau, sistemas lineares, polinômios e funções, construindo uma base sólida para qualquer desafio matemático!</p>
+    </div>
+</section>
 
-    </section>
+<section id="geometria" class="subject-card reverse-layout fade-in">
+    <div class="subject-image">
+        <img src="img/geometria.png" alt="Formas Geométricas 3D e Ferramentas">
+    </div>
+    <div class="subject-content">
+        <h2 class="subject-title">Geometria</h2>
+        <p class="subject-description">A Geometria nos conecta ao mundo real, explorando as propriedades das formas, tamanhos e posições. É a chave para compreender o design, a arquitetura e a natureza ao nosso redor, desde as linhas de um edifício até a curvatura de um planeta.</p>
+        <p class="subject-description">Mergulhe na geometria plana (triângulos, círculos, quadriláteros) e espacial (cubos, esferas, pirâmides). Descubra os fascinantes teoremas de Pitágoras e Thales, e aprenda a aplicar esses conhecimentos em situações práticas!</p>
+    </div>
+</section>
+
+<section id="matematica-basica" class="subject-card align-right-content fade-in">
+    <div class="subject-image">
+        <img src="img/mate.png" alt="Cálculos e Números">
+    </div>
+    <div class="subject-content">
+        <h2 class="subject-title">Matemática Básica</h2>
+        <p class="subject-description">A Matemática Básica é o alicerce indispensável de todo o conhecimento numérico. Ela constrói a base para a compreensão de conceitos mais complexos, sendo essencial para o dia a dia e para todas as outras áreas do conhecimento.</p>
+        <p class="subject-description">Reforce suas habilidades em operações fundamentais, frações, decimais, porcentagens e regras de sinais. Garanta uma base sólida que abrirá portas para o aprendizado de qualquer matéria exata!</p>
+    </div>
+</section>
 
     <section class="call-to-action">
         <div class="container">
@@ -129,6 +145,12 @@
             </div>
         </div>
     </footer>
+
+    <button id="backToTopBtn" title="Voltar ao Topo">
+        &#9650; </button>
+    
     <script src="java/script.js"></script>
+
+    
 </body>
 </html>
