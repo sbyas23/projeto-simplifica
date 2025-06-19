@@ -1,23 +1,60 @@
 
- const textos = [
-    "A Álgebra é uma área da matemática que usa letras e símbolos para representar números e resolver problemas.",
-    "Ela ajuda a entender relações, criar fórmulas e desenvolver o raciocínio lógico.",
-    "Na álgebra, usamos variáveis como 'x' e 'y' para generalizar operações.",
-    "Resolver equações é uma das principais aplicações da álgebra."
-  ];
+document.addEventListener('DOMContentLoaded', function() {
+ 
+    const navLinks = document.querySelectorAll('.nav-link');
+    if (navLinks.length > 0) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    const header = document.querySelector('.main-header');
+                    if (header) {
+                        const headerHeight = header.offsetHeight;
+                        const scrollPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
-  let indiceAtual = 0;
+                        window.scrollTo({
+                            top: scrollPosition,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  
 
-  function atualizarTexto() {
-    document.getElementById("textos").innerText = textos[indiceAtual];
-  }
+                } else {
+                    console.warn(`[Scroll Ancorado] Elemento com ID "${targetId}" não foi encontrado na página.`);
+                }
+            });
+        });
+    } else {
+        console.warn("[Scroll Ancorado] Nenhum link com a classe 'nav-link' foi encontrado para configurar a rolagem suave.");
+    }
+});
 
-  function mostrarTextoAnterior() {
-    indiceAtual = (indiceAtual - 1 + textos.length) % textos.length;
-    atualizarTexto();
-  }
 
-  function mostrarTextoProximo() {
-    indiceAtual = (indiceAtual + 1) % textos.length;
-    atualizarTexto();
-  }
+const backToTopBtn = document.getElementById("backToTopBtn");
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = "block"; 
+        backToTopBtn.style.opacity = "1";
+    } else {
+        backToTopBtn.style.display = "none";
+        backToTopBtn.style.opacity = "0"; 
+    }
+}
+
+backToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0, // Rola para o topo (posição 0)
+        behavior: 'smooth' // Com rolagem suave
+    });
+});
